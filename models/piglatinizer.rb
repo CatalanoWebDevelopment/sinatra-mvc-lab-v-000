@@ -10,9 +10,9 @@ class PigLatinizer
 
     if @word.length == 1 || @word.match(/^[aeiouAEIOU]/)
       word + "way"
-    elsif word[1].match(/[aeiouAEIOU]/)
+    elsif /[aeiouAEIOU]/.match(word[1])
        word.gsub(/^[bcdfghjklmnpqrstvxywBCDFGHJKLMNPQRSTVXYW]/, "") + first + "ay"
-    elsif word[2].match(/[aeiouAEIOU]/)
+    elsif /[aeiouAEIOU]/.match(word[2])
        word.gsub(word[0..1], "") + (word[0..1]).downcase + "ay"
      else
        word.gsub(word[0..2], "") + (word[0..2]).downcase + "ay"
