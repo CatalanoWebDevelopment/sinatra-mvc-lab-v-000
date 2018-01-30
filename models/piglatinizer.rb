@@ -7,7 +7,7 @@ class PigLatinizer
   def piglatinize(word)
     @word = word.downcase
     first = word[0]
-
+binding.pry
     if @word.length == 1 || @word.match(/^[aeiouAEIOU]/)
       word + "way"
     elsif /[aeiouAEIOU]/.match(word[1])
@@ -30,5 +30,3 @@ class PigLatinizer
   end
 
 end
-
-binding.pry
