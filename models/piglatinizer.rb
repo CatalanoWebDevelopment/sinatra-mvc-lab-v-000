@@ -30,3 +30,5 @@ class PigLatinizer
   end
 
 end
+
+binding.pry
